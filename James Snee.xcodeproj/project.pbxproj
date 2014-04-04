@@ -31,6 +31,7 @@
 		59D298A618EF338500891343 /* james_banner_blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D298A518EF338500891343 /* james_banner_blur.png */; };
 		59D298AB18EF723E00891343 /* Classic_Booting.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D298AA18EF723E00891343 /* Classic_Booting.m */; };
 		59D298AC18EF738000891343 /* ChicagoFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59D298A818EF719D00891343 /* ChicagoFLF.ttf */; };
+		59D298AF18EF7A9D00891343 /* Classic_Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D298AE18EF7A9D00891343 /* Classic_Home.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		59D298A818EF719D00891343 /* ChicagoFLF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChicagoFLF.ttf; sourceTree = "<group>"; };
 		59D298A918EF723E00891343 /* Classic_Booting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classic_Booting.h; sourceTree = "<group>"; };
 		59D298AA18EF723E00891343 /* Classic_Booting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classic_Booting.m; sourceTree = "<group>"; };
+		59D298AD18EF7A9D00891343 /* Classic_Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classic_Home.h; sourceTree = "<group>"; };
+		59D298AE18EF7A9D00891343 /* Classic_Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classic_Home.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				59A5003918EDD3730061EF78 /* Main.storyboard */,
 				59A5003C18EDD3730061EF78 /* Standard_Home.h */,
 				59A5003D18EDD3730061EF78 /* Standard_Home.m */,
+				59D298AD18EF7A9D00891343 /* Classic_Home.h */,
+				59D298AE18EF7A9D00891343 /* Classic_Home.m */,
 				59D298A918EF723E00891343 /* Classic_Booting.h */,
 				59D298AA18EF723E00891343 /* Classic_Booting.m */,
 				59A5003F18EDD3730061EF78 /* Images.xcassets */,
@@ -312,6 +317,7 @@
 				59A5003818EDD3730061EF78 /* AppDelegate.m in Sources */,
 				59A5003418EDD3730061EF78 /* main.m in Sources */,
 				59D298AB18EF723E00891343 /* Classic_Booting.m in Sources */,
+				59D298AF18EF7A9D00891343 /* Classic_Home.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

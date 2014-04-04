@@ -59,6 +59,8 @@ int width = 0;
             [self.bootingProgress setImage:img];
         } else {
             [self.timer invalidate];
+            width = 0;
+            [self performSegueWithIdentifier:@"showClassicHome" sender:self];
         }
     }
 }

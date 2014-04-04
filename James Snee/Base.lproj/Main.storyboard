@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="17"/>
+            <point key="canvasLocation" x="-253" y="243"/>
         </scene>
         <!--Classic Booting-->
         <scene sceneID="XcJ-6d-ZI2">
@@ -120,11 +120,35 @@
                     <connections>
                         <outlet property="booting" destination="oYv-6m-qHU" id="1rN-Z7-x1b"/>
                         <outlet property="bootingProgress" destination="LjE-bP-mRM" id="SnQ-td-9d9"/>
+                        <segue destination="Yia-kx-kga" kind="modal" identifier="showClassicHome" modalTransitionStyle="crossDissolve" id="Rtr-Vk-dsb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhn-1k-FXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="-405"/>
+            <point key="canvasLocation" x="282" y="-363"/>
+        </scene>
+        <!--Classic Home-->
+        <scene sceneID="fzS-ZN-gRk">
+            <objects>
+                <viewController id="Yia-kx-kga" customClass="Classic_Home" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V7w-O3-Ia7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cNp-Et-MOB">
+                                <rect key="frame" x="143" y="269" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UM2-jE-GYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="-363"/>
         </scene>
     </scenes>
     <resources>
