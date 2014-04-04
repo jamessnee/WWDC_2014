@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define kVIEW_STATE_STANDARD @"kVIEW_STATE_STANDARD"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)resetViewType;
+- (void)switchViewType;
+- (BOOL)isViewStandard;
 
 @end
