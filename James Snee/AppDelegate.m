@@ -38,6 +38,7 @@
 {
     // Make sure we start in the standard view
     [self resetViewType];
+    
     return YES;
 }
 							

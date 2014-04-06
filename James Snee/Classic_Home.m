@@ -8,6 +8,10 @@
 
 #import "Classic_Home.h"
 
+#define kMANUAL_SCROLL_DELTA 10
+#define kMANUAL_SCROLL_MAX 230
+#define KMANUAL_SCROLL_MIN 0
+
 @interface Classic_Home ()
 
 @end
@@ -26,8 +30,43 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CGRect statusFrame = [[UIApplication sharedApplication] statusBarFrame];
+    UIView *solidStatusBar = [[UIView alloc] initWithFrame:statusFrame];
+    [solidStatusBar setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:solidStatusBar];
+    
+    UIFont *classicFont = [UIFont fontWithName:@"ChicagoFLF" size:15];
+    [self.standard.titleLabel setFont:classicFont];
+    [self.shortBio setFont:classicFont];
+    
+    [self.contentScroll setContentSize:CGSizeMake(320, 800)];
 }
+
+- (IBAction)makeStandard:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
+- (IBAction)scrollUp:(id)sender
+{
+    int scrollP = self.contentScroll.contentOffset.y + kMANUAL_SCROLL_DELTA;
+    if (scrollP < kMANUAL_SCROLL_MAX)
+        [self.contentScroll setContentOffset:CGPointMake(0, scrollP)];
+}
+
+- (IBAction)scrollDown:(id)sender
+{
+    int scrollP = self.contentScroll.contentOffset.y + (1 - kMANUAL_SCROLL_DELTA);
+    if (scrollP > KMANUAL_SCROLL_MIN)
+        [self.contentScroll setContentOffset:CGPointMake(0, scrollP)];
+}
+
+//#pragma mark - UIScrollViewDelegate
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//
+//}
 
 - (void)didReceiveMemoryWarning
 {

@@ -18,9 +18,18 @@
 @property (strong)IBOutlet UIScrollView *fgScroll;
 @property (strong)IBOutlet UIView *fgContainer;
 @property (strong)IBOutlet UILabel *fgLabel;
+@property (strong)IBOutlet UIImageView *fgNameBg;
 
-- (void)setupParallax;
+// Menu
+@property (strong)IBOutlet UIButton *menu_1;
+@property (strong)IBOutlet UIButton *menu_2;
+@property (strong)IBOutlet UIButton *menu_3;
+@property (strong)IBOutlet UIButton *menu_4;
+@property (strong)IBOutlet UIButton *menu_5;
+
+- (void)setupParallaxForView:(UIView *)view magnitude:(int)mag;
 - (void)setupScrollViews;
+- (void)blurStatusBar;
 - (void)drawBlurredImage;
 
 // Event handlers

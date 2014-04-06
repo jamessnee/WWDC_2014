@@ -32,6 +32,7 @@
 		59D298AB18EF723E00891343 /* Classic_Booting.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D298AA18EF723E00891343 /* Classic_Booting.m */; };
 		59D298AC18EF738000891343 /* ChicagoFLF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59D298A818EF719D00891343 /* ChicagoFLF.ttf */; };
 		59D298AF18EF7A9D00891343 /* Classic_Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D298AE18EF7A9D00891343 /* Classic_Home.m */; };
+		59D298B118F0671A00891343 /* james_banner_classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D298B018F0671A00891343 /* james_banner_classic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		59D298AA18EF723E00891343 /* Classic_Booting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classic_Booting.m; sourceTree = "<group>"; };
 		59D298AD18EF7A9D00891343 /* Classic_Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classic_Home.h; sourceTree = "<group>"; };
 		59D298AE18EF7A9D00891343 /* Classic_Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classic_Home.m; sourceTree = "<group>"; };
+		59D298B018F0671A00891343 /* james_banner_classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = james_banner_classic.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,15 +148,9 @@
 		59A5002D18EDD3730061EF78 /* James Snee */ = {
 			isa = PBXGroup;
 			children = (
-				59A5003618EDD3730061EF78 /* AppDelegate.h */,
-				59A5003718EDD3730061EF78 /* AppDelegate.m */,
-				59A5003918EDD3730061EF78 /* Main.storyboard */,
-				59A5003C18EDD3730061EF78 /* Standard_Home.h */,
-				59A5003D18EDD3730061EF78 /* Standard_Home.m */,
-				59D298AD18EF7A9D00891343 /* Classic_Home.h */,
-				59D298AE18EF7A9D00891343 /* Classic_Home.m */,
-				59D298A918EF723E00891343 /* Classic_Booting.h */,
-				59D298AA18EF723E00891343 /* Classic_Booting.m */,
+				59D298B418F0789600891343 /* Application */,
+				59D298B318F0788A00891343 /* Views */,
+				59D298B218F0788000891343 /* Controllers */,
 				59A5003F18EDD3730061EF78 /* Images.xcassets */,
 				59A5002E18EDD3730061EF78 /* Supporting Files */,
 			);
@@ -195,6 +191,7 @@
 		59D2988518EE15E200891343 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				59D298B018F0671A00891343 /* james_banner_classic.png */,
 				59D2988818EEE09100891343 /* james_banner.png */,
 				59D2988618EE15F900891343 /* james.jpg */,
 				59D298A518EF338500891343 /* james_banner_blur.png */,
@@ -208,6 +205,36 @@
 				59D298A818EF719D00891343 /* ChicagoFLF.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		59D298B218F0788000891343 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59A5003C18EDD3730061EF78 /* Standard_Home.h */,
+				59A5003D18EDD3730061EF78 /* Standard_Home.m */,
+				59D298AD18EF7A9D00891343 /* Classic_Home.h */,
+				59D298AE18EF7A9D00891343 /* Classic_Home.m */,
+				59D298A918EF723E00891343 /* Classic_Booting.h */,
+				59D298AA18EF723E00891343 /* Classic_Booting.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		59D298B318F0788A00891343 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59A5003918EDD3730061EF78 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		59D298B418F0789600891343 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				59A5003618EDD3730061EF78 /* AppDelegate.h */,
+				59A5003718EDD3730061EF78 /* AppDelegate.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D298AC18EF738000891343 /* ChicagoFLF.ttf in Resources */,
+				59D298B118F0671A00891343 /* james_banner_classic.png in Resources */,
 				59D2988718EE15F900891343 /* james.jpg in Resources */,
 				59A5004018EDD3730061EF78 /* Images.xcassets in Resources */,
 				59D2988918EEE09100891343 /* james_banner.png in Resources */,

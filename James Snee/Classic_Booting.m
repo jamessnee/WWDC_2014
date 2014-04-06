@@ -45,7 +45,7 @@ int width = 0;
     UIFont *font = [UIFont fontWithName:@"ChicagoFLF" size:17];
     [self.booting setFont:font];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(timerFire) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerFire) userInfo:nil repeats:YES];
 }
 
 - (void)timerFire
