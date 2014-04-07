@@ -31,8 +31,11 @@
 - (void)setupScrollViews;
 - (void)blurStatusBar;
 - (void)drawBlurredImage;
+- (void)openWebURL:(NSString *)url_s;
 
-// Event handlers
-- (IBAction)makeClassic:(id)sender;
+// Event Handlers
+- (IBAction)openGithub:(id)sender;
+- (IBAction)openTwitter:(id)sender;
+- (IBAction)openLinkedin:(id)sender;
 
 @end

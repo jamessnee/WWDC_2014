@@ -12,6 +12,7 @@
 @property (strong) UIImageView *blurredImage;
 @property (strong) UIView *blurredView;
 @property (strong) UIView *whiteView;
+@property (strong) UIDynamicAnimator *animator;
 @end
 
 @implementation Standard_Home
@@ -32,54 +33,66 @@
  */
 - (void)viewWillAppear:(BOOL)animated
 {
-    CGRect menu_1_fr = CGRectMake(-320, 124, 320, 44);
+    CGRect menu_1_fr = CGRectMake(-320, 211, 320, 44);
     [self.menu_1 setFrame:menu_1_fr];
-    CGRect menu_2_fr = CGRectMake(320, 185, 320, 44);
+    CGRect menu_2_fr = CGRectMake(320, 272, 320, 44);
     [self.menu_2 setFrame:menu_2_fr];
-    CGRect menu_3_fr = CGRectMake(-320, 246, 320, 44);
+    CGRect menu_3_fr = CGRectMake(-320, 333, 320, 44);
     [self.menu_3 setFrame:menu_3_fr];
-    CGRect menu_4_fr = CGRectMake(320, 307, 320, 44);
+    CGRect menu_4_fr = CGRectMake(320, 394, 320, 44);
     [self.menu_4 setFrame:menu_4_fr];
-    CGRect menu_5_fr = CGRectMake(-320, 368, 320, 44);
+    CGRect menu_5_fr = CGRectMake(-320, 455, 320, 44);
     [self.menu_5 setFrame:menu_5_fr];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    CGRect menu_1_fr = CGRectMake(0, 124, 320, 44);
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+    CGRect menu_1_fr = CGRectMake(0, 211, 320, 44);
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^(){
         [self.menu_1 setFrame:menu_1_fr];
     }completion:nil];
     
-    CGRect menu_2_fr = CGRectMake(0, 185, 320, 44);
-    [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+    CGRect menu_2_fr = CGRectMake(0, 272, 320, 44);
+    [UIView animateWithDuration:0.2 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^(){
         [self.menu_2 setFrame:menu_2_fr];
     }completion:nil];
     
-    CGRect menu_3_fr = CGRectMake(0, 246, 320, 44);
-    [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
-        [self.menu_3 setFrame:menu_3_fr];
-    }completion:nil];
+    if (self.fgScroll.contentOffset.y > 60) {
+        CGRect menu_3_fr = CGRectMake(0, 333, 320, 44);
+        [UIView animateWithDuration:0.2 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+            [self.menu_3 setFrame:menu_3_fr];
+        }completion:nil];
+    }
     
-    if (self.fgScroll.contentOffset.y > 17) {
-        CGRect menu_4_fr = CGRectMake(0, 307, 320, 44);
-        [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+    if (self.fgScroll.contentOffset.y > 120) {
+        CGRect menu_4_fr = CGRectMake(0, 394, 320, 44);
+        [UIView animateWithDuration:0.2 delay:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^(){
             [self.menu_4 setFrame:menu_4_fr];
         }completion:nil];
     }
     
-    if (self.fgScroll.contentOffset.y > 76) {
-        CGRect menu_5_fr = CGRectMake(0, 368, 320, 44);
-        [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+    if (self.fgScroll.contentOffset.y > 182) {
+        CGRect menu_5_fr = CGRectMake(0, 455, 320, 44);
+        [UIView animateWithDuration:0.2 delay:0.4 options:UIViewAnimationOptionCurveEaseOut animations:^(){
             [self.menu_5 setFrame:menu_5_fr];
         }completion:nil];
     }
 }
 
 #pragma mark - Event Handlers
-- (IBAction)makeClassic:(id)sender
+- (IBAction)openGithub:(id)sender
 {
-    [self performSegueWithIdentifier:@"makeClassic" sender:self];
+    [self openWebURL:@"http://www.github.com/jamessnee"];
+}
+
+- (IBAction)openTwitter:(id)sender
+{
+    [self openWebURL:@"http://www.twitter.com/jamssn"];
+}
+
+- (IBAction)openLinkedin:(id)sender
+{
+    [self openWebURL:@"http://www.linkedin.com/pub/james-snee/2b/144/91"];
 }
 
 #pragma mark - UIScrollView Delegate
@@ -91,16 +104,23 @@
     
     [self drawBlurredImage];
     
-    if (scrollView.contentOffset.y > 17 && self.menu_4.frame.origin.x > 0) {
-        CGRect menu_4_fr = CGRectMake(0, 307, 320, 44);
-        [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+    if (scrollView.contentOffset.y > 60 && self.menu_3.frame.origin.x < 0) {
+        CGRect menu_3_fr = CGRectMake(0, 333, 320, 44);
+        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+            [self.menu_3 setFrame:menu_3_fr];
+        }completion:nil];
+    }
+    
+    if (scrollView.contentOffset.y > 120 && self.menu_4.frame.origin.x > 0) {
+        CGRect menu_4_fr = CGRectMake(0, 394, 320, 44);
+        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^(){
             [self.menu_4 setFrame:menu_4_fr];
         }completion:nil];
     }
     
-    if (scrollView.contentOffset.y > 76 && self.menu_5.frame.origin.x < 0) {
-        CGRect menu_5_fr = CGRectMake(0, 368, 320, 44);
-        [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+    if (scrollView.contentOffset.y > 182 && self.menu_5.frame.origin.x < 0) {
+        CGRect menu_5_fr = CGRectMake(0, 455, 320, 44);
+        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^(){
             [self.menu_5 setFrame:menu_5_fr];
         }completion:nil];
     }
@@ -174,7 +194,7 @@
 - (void)setupScrollViews
 {
     [self.bgScroll setContentSize:CGSizeMake(320, 800)];
-    [self.fgScroll setContentSize:CGSizeMake(320, 825)];
+    [self.fgScroll setContentSize:CGSizeMake(320, 840)];
 }
 
 - (void)setupParallaxForView:(UIView *)view magnitude:(int)mag;
@@ -199,6 +219,12 @@
     motion.motionEffects = @[vertMotion, horizMotion];
 
     [view addMotionEffect:motion];
+}
+
+- (void)openWebURL:(NSString *)url_s
+{
+    NSURL *url = [NSURL URLWithString:url_s];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (void)didReceiveMemoryWarning
