@@ -7,6 +7,7 @@
 //
 
 #import "Standard_Home.h"
+#import "AppDelegate.h"
 
 @interface Standard_Home ()
 @property (strong) UIImageView *blurredImage;
@@ -21,6 +22,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [delegate switchViewType:@"kVIEW_STATE_STANDARD"];
     
     [self setupParallaxForView:self.fgNameBg magnitude:10];
     [self setupParallaxForView:self.fgLabel magnitude:20];
