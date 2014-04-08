@@ -90,19 +90,15 @@
 
 - (void)appClicked:(id)sender
 {
-    // DTG Weather - 85
-    // ScaleBox - 390
-    // Hay - 597
-    // Ucam - 734
     CGPoint point;
     if (sender == self.content.weather)
-        point = CGPointMake(0, 85);
+        point = CGPointMake(0, 101);
     else if (sender == self.content.scalebox)
-        point = CGPointMake(0, 390);
+        point = CGPointMake(0, 533);
     else if (sender == self.content.hay)
-        point = CGPointMake(0, 597);
+        point = CGPointMake(0, 843);
     else if (sender == self.content.ucamlib)
-        point = CGPointMake(0, 734);
+        point = CGPointMake(0, 1173);
     
     [self.content.topScroll setContentOffset:point animated:YES];
 }
