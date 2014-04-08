@@ -1,18 +1,18 @@
 //
-//  Classic_Experience.m
+//  Classic_Education.m
 //  James Snee
 //
-//  Created by James Snee on 07/04/2014.
+//  Created by James Snee on 08/04/2014.
 //
 //
 
-#import "Classic_Experience.h"
+#import "Classic_Education.h"
 
-@interface Classic_Experience ()
+@interface Classic_Education ()
 
 @end
 
-@implementation Classic_Experience
+@implementation Classic_Education
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     UIFont *classicFont = [UIFont fontWithName:@"ChicagoFLF" size:15];
     [self.header setFont:classicFont];
     

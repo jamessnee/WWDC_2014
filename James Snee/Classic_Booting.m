@@ -7,6 +7,7 @@
 //
 
 #import "Classic_Booting.h"
+#import "AppDelegate.h"
 
 @interface Classic_Booting ()
 @property (strong) NSTimer *timer;
@@ -41,6 +42,9 @@ int width = 0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [delegate switchViewType:kVIEW_STATE_CLASSIC];
     
     UIFont *font = [UIFont fontWithName:@"ChicagoFLF" size:17];
     [self.booting setFont:font];
