@@ -13,24 +13,21 @@
 #pragma mark - View State
 - (void)resetViewType
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:kVIEW_STATE_STANDARD];
+    [self switchViewType:kVIEW_STATE_STANDARD];
 }
 
-- (void)switchViewType
+- (void)switchViewType:(NSString *)type
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if ([defaults boolForKey:kVIEW_STATE_STANDARD])
-        [defaults setBool:NO forKey:kVIEW_STATE_STANDARD];
-    else
-        [defaults setBool:YES forKey:kVIEW_STATE_STANDARD];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    if ([type  isEqual: kVIEW_STATE_STANDARD] || [type  isEqual: kVIEW_STATE_CLASSIC])
+//        [defaults setObject:type forKey:kVIEW_STATE_KEY];
+    return;
 }
 
-- (BOOL)isViewStandard
+- (NSString *)getViewState
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    return [defaults boolForKey:kVIEW_STATE_STANDARD];
+    return [defaults objectForKey:kVIEW_STATE_KEY];
 }
 
 #pragma mark - App Lifecycle
