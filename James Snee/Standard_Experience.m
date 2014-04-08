@@ -26,10 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Show a colored view at the top behind the status bar
     UIView *statusBarV = [[UIView alloc] initWithFrame:[[UIApplication sharedApplication] statusBarFrame]];
-    [statusBarV setBackgroundColor:[UIColor colorWithRed:255/255.0 green:204/255.0 blue:0 alpha:1]];
+    [statusBarV setBackgroundColor:[UIColor colorWithRed:236/255.0 green:189/255.0 blue:0 alpha:1]];
     [self.view addSubview:statusBarV];
 }
 
