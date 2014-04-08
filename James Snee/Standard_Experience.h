@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Standard_Experience : UIViewController
+@interface Standard_Experience : UIViewController <UIScrollViewDelegate>
 
 - (IBAction)popView:(id)sender;
+- (void)appClicked:(id)sender;
 
 @end
